@@ -3,8 +3,21 @@
   <title>JavaScript for Newbies</title>
 </head>
 <body>
-  <script>
+  <script type="text/javascript">
     console.log('Hello, World!')
+    setTimeout(function() { console.log('hi') }, 3000)
+    setTimeout(function() { console.log('hey') }, 3000)
+    console.log('Yeah!')
+
+    let promise = new Promise(function(resolve, reject) {
+    //   resolve()
+      setTimeout(() => resolve('done'), 3000)
+    })
+    console.log(promise)
+    promise.then(result => {
+        console.log(promise)
+        console.log(result)
+    })
   </script>
 </body>
 </html>
